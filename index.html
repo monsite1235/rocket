@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket League Playbook - L'Encyclopédie Absolue</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #060913;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0044ff, #e63946);
+            padding: 70px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.8);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3.8em;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-top: 12px;
+            font-weight: 400;
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 2em;
+            border-bottom: 2px solid #1f293d;
+            padding-bottom: 10px;
+            margin-top: 60px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* Accordéons Interactifs */
+        details {
+            background-color: #0f1626;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            border: 1px solid #1f293d;
+            overflow: hidden;
+            transition: all 0.2s ease-approx;
+        }
+
+        details[open] {
+            border-color: #0044ff;
+            box-shadow: 0 0 20px rgba(0, 68, 255, 0.3);
+        }
+
+        summary {
+            padding: 20px;
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #f7fafc;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            background-color: #141d30;
+            user-select: none;
+        }
+
+        summary::after {
+            content: '▼';
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.2s ease;
+            color: #a0aec0;
+            font-size: 0.8em;
+        }
+
+        details[open] summary::after {
+            transform: translateY(-50%) rotate(180deg);
+            color: #0044ff;
+        }
+
+        summary:hover {
+            background-color: #1a263e;
+            color: #fff;
+        }
+
+        /* Contenu interne */
+        .content {
+            padding: 30px;
+            background-color: #0b101d;
+            border-top: 1px solid #1f293d;
+        }
+
+        .step {
+            margin-bottom: 20px;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-title {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
+        }
+
+        .step-debutant .step-title { color: #00f5d4; }
+        .step-inter .step-title { color: #ffee32; }
+        .step-pro .step-title { color: #ff007f; }
+
+        /* Boutons de la manette */
+        .btn {
+            background-color: #2d3748;
+            color: #fff;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+            border: 1px solid #4a5568;
+            display: inline-block;
+        }
+
+        /* Thèmes de bordures pour l'organisation */
+        .cat-dash { border-left: 6px solid #00f5d4; }
+        .cat-sol { border-left: 6px solid #00b4d8; }
+        .cat-flick { border-left: 6px solid #ff9f1c; }
+        .cat-pinch { border-left: 6px solid #9b5de5; }
+        .cat-air { border-left: 6px solid #560bad; }
+        .cat-god { border-left: 6px solid #ff007f; }
+        .cat-settings { border-left: 6px solid #a0aec0; }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            margin-top: 100px;
+            background-color: #03050a;
+            color: #4a5568;
+            font-size: 1em;
+            border-top: 1px solid #0f1626;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rocket League Grand Playbook</h1>
+        <p class="subtitle">Chaque mouvement. Chaque bouton. De Zéro à Légende.</p>
+    </header>
+
+    <div class="container">
+        
+        <h2>⚡ L'Art du Dash (Vitesse Absolue)</h2>
+        
+        <details class="cat-dash">
+            <summary>Wavedash Basique</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Gagner de la vitesse instantanément sans utiliser de boost en écrasant un saut contre le sol.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Attends que tes deux roues arrière touchent le sol alors que l'avant de ta voiture est encore en l'air avant de déclencher ton flip.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Petit <span class="btn">Saut</span> ➔ Incline la voiture vers l'arrière ➔ Dès que les roues arrière touchent le sol : Esquive avant + maintiens <span class="btn">Dérapage</span>.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-dash">
+            <summary>Infinite Dash (Horse Dash)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Enchaîner des vagues de wavedashes au sol à une vitesse folle sans s'arrêter, faisant ressembler la voiture à un cheval au galop.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Tu dois briser l'animation de redressement de la voiture. En spammant le joystick de gauche à droite en rythme avec le bouton de saut, les suspensions s'écrasent en boucle.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Maintiens <span class="btn">Dérapage</span> ➔ Incline légèrement ton joystick à gauche ➔ Fais un Wavedash à droite ➔ Immédiatement après, incline le joystick à droite et fais un Wavedash à gauche. Spamme ce balancement gauche/droite ultra rapidement.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-dash">
+            <summary>Curvedash</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Prendre une accélération phénoménale en passant du mur au sol sans jamais appuyer sur le bouton de saut.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Profite de la gravité et de la courbe physique qui relie le mur au sol. Le jeu compresse tes suspensions à cet endroit, te donnant un flip "gratuit" sans quitter le sol.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Descends du mur vers le sol ➔ Pile au moment où tes roues touchent l'arrondi (la courbe) : Claque une esquive vers l'avant ou en diagonale sans avoir sauté au préalable.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-dash">
+            <summary>Zapdash</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Placer un Wavedash direct après une réception pour repartir instantanément en attaque.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Fais exprès de faire atterrir tes roues avant un tout petit peu avant tes roues arrière. Le choc fait rebondir l'avant de ta voiture, te donnant la position parfaite pour flipper.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>À l'atterrissage, laisse le nez toucher le sol en premier ➔ Dès que l'avant rebondit d'un millimètre, appuie sur Esquive Avant + <span class="btn">Dérapage</span>.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-dash">
+            <summary>Wall-Dash</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Prendre une vitesse maximale en ligne droite sur les murs verticaux en spammant des micro-animations.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Il faut donner des petits coups de joystick ultra-rapides vers le mur tout en détruisant ton bouton de saut.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Sur le mur ➔ Oriente ton joystick à 45° vers le haut/côté du mur ➔ Spamme le bouton <span class="btn">Saut</span> à toute vitesse en ramenant le joystick vers le mur entre chaque clic.</p></div>
+            </div>
+        </details>
+
+
+        <h2>🚗 Contrôle Terrestre & Mindgames</h2>
+
+        <details class="cat-sol">
+            <summary>Half-Flip</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Faire un demi-tour sur place à 180° pour passer instantanément de l'attaque à la défense.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Le secret réside dans le blocage du joystick. Si tu lances un flip arrière, tu dois forcer ton joystick vers le haut pour figer la voiture sur le dos.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Esquive arrière ➔ Pousse le joystick gauche vers le haut à mi-chemin (Flip Cancel) ➔ Active le <span class="btn">Tonneau Aérien</span> pour remettre tes roues au sol.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-sol">
+            <summary>Bounce Dribble & Fakes</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Faire rebondir la balle devant soi pour masquer ses intentions ou feinter une frappe pour regarder l'adversaire s'envoler dans le vide.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Pour le dribble, tape la balle au millième de seconde APRÈS son rebond pour la lever proprement. Pour le Fake, décélère brusquement juste avant l'impact.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Suis le rythme du ballon ➔ Appuie brièvement sur le <span class="btn">Frein</span> pour simuler un tir et laisser glisser l'adversaire ➔ Ré-accélère pour pousser la balle dans le but vide.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-sol">
+            <summary>Powerslide Cutting (Crochets dérapés)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Changer de direction de manière ultra-violente au sol avec la balle pour briser les chevilles du défenseur.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>N'appuie pas en continu sur le dérapage, donne des petites impulsions ultra-brèves pour faire pivoter la voiture sans perdre ton élan.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>En conduisant à côté de la balle ➔ Tourne le joystick à fond ➔ Tapote <span class="btn">Dérapage</span> pendant 0.2 seconde ➔ Enchaîne immédiatement avec du <span class="btn">Boost</span> pour sortir du virage à pleine puissance.</p></div>
+            </div>
+        </details>
+
+
+        <h2>🌪️ L'Art des Flicks (Pichenettes)</h2>
+
+        <details class="cat-flick">
+            <summary>Musty Flick (Au sol)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Utiliser un effet mécanique unique du jeu pour catapulter la balle vers l'avant avec un flip arrière.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>La physique de Rocket League dit que si le nez de ta voiture pointe vers le bas au-delà d'un angle vertical (plus de 90°), faire un flip arrière te propulsera vers l'avant !</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Prends la balle sur ton toit ➔ <span class="btn">Saut</span> simple ➔ Penche ton joystick gauche vers l'avant pour piquer du nez au-delà des 90° ➔ Lâche le joystick ➔ Déclenche ton deuxième saut (Backflip).</p></div>
+            </div>
+        </details>
+
+        <details class="cat-flick">
+            <summary>45-Degree Flick</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Le flick le plus puissant et le plus utilisé par les joueurs professionnels pour lober le gardien à plus de 110 km/h.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>La balle doit se situer légèrement sur le côté de ton toit vers lequel tu vas tourner. Elle doit être parfaitement stable.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Balle sur le toit ➔ <span class="btn">Saut</span> (maintiens pour monter haut) ➔ Tourne ta voiture à 45° sur le côté avec le joystick ➔ Claque instantanément une esquive diagonale arrière dans le sens inverse de ton orientation.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-flick">
+            <summary>Breezi Flick</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Le flick le plus esthétique du jeu, combinant une rotation complète en l'air et un Musty final.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>C'est une chorégraphie. Tu dois maîtriser le "Tornado Spin" pour placer ta voiture à l'envers au bon endroit sous le ballon.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Saute sous la balle ➔ Active <span class="btn">Tonneau Aérien Gauche</span> + Joystick vers la droite (Tornado) ➔ Dès que le toit regarde le sol, lâche tout, oriente le nez vers le bas et termine par un Musty Flick.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-flick">
+            <summary>Classy Flick / Wizard Flick</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Flicke la balle en lui tournant complètement le dos, surprenant totalement la défense.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Tu dois te retrouver la tête en bas, l'arrière de ta voiture pointant vers le ballon pour le fouetter.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Saute avec la balle ➔ Fais basculer ta voiture vers l'avant à 180° (ton arrière fait face à la balle) ➔ Utilise le <span class="btn">Tonneau Aérien</span> pour te mettre sur le dos ➔ Effectue une esquive arrière ou diagonale arrière.</p></div>
+            </div>
+        </details>
+
+
+        <h2>💥 Les Pinches (Pincements)</h2>
+
+        <details class="cat-pinch">
+            <summary>Kuxir Pinch</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Coincer la balle contre le mur pour la propulser directement dans la cage adverse à une vitesse supersonique.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Ne frappe pas le ballon avec l'avant. Tu dois utiliser le plat de ton flanc ou ton dos pour emprisonner la balle contre la paroi.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Fais rouler la balle sur le mur latéral ➔ Saute pour te décoller légèrement ➔ Pivote à 90° (toit face à toi) ➔ Utilise ton esquive avant pour écraser la balle entre ton flanc et le mur.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-pinch">
+            <summary>Ground Pinch</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Pincer la balle du ciel directement contre le sol pour générer un rebond foudroyant impossible à arrêter.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>L'impact de ta voiture et de la balle au sol doit se faire au même millième de seconde. Tu dois être situé juste au-dessus du ballon.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>En vol au-dessus de la balle ➔ Oriente ton nez vers le bas ➔ Utilise ton esquive vers l'avant pour plaquer ton pare-choc sur le sommet de la balle juste au moment du crash au sol.</p></div>
+            </div>
+        </details>
+
+
+        <h2>✈️ Contrôle Aérien & Pre-Flips</h2>
+
+        <details class="cat-air">
+            <summary>Fast Aerial</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>S'envoler instantanément deux fois plus vite que les autres pour intercepter les ballons aériens.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Lâche impérativement ton joystick de mouvement au moment d'appuyer sur ton deuxième saut, sinon tu feras un backflip sur place.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Maintiens <span class="btn">Boost</span> ➔ Joystick en arrière + <span class="btn">Saut</span> ➔ **Remets le joystick au centre** ➔ Appuie sur <span class="btn">Saut</span> une 2ème fois tout en maintenant le boost à fond.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-air">
+            <summary>Pre-Flip Air Dribble</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title"> L'idée</div><p>Utiliser un flip dans le vide pour rattraper la balle en l'air et commencer à la coller sur son nez.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Tu n'utilises pas le flip pour frapper fort, tu l'utilises pour utiliser la fin de la rotation de ta voiture pour amortir et coller la balle.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Saute du mur ou du sol loin de la balle ➔ Déclenche un flip avant/diagonal ➔ Annule le flip (Cancel) à mi-chemin pour bloquer ton nez sous le ballon ➔ Enchaîne avec du <span class="btn">Boost</span>.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-air">
+            <summary>Doomsee Dish</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Marquer un but vicieux en longeant le mur au-dessus des cages adverses pour rabattre la balle à l'intérieur.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Attends que la balle flotte devant le cadre. Tu dois plonger depuis le mur vertical du fond de terrain.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Roule sur le mur du fond adverse (Backboard) ➔ Saute vers le terrain ➔ Utilise le <span class="btn">Tonneau Aérien</span> pour orienter ton toit vers le sol ➔ Flip avant pour pousser la balle vers le bas dans les filets.</p></div>
+            </div>
+        </details>
+
+
+        <h2>👑 Mécaniques Élite & Légendaires</h2>
+
+        <details class="cat-god">
+            <summary>Flip Reset Basique</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Poser les 4 roues de sa voiture sous le ballon en plein vol pour récupérer son double saut à l'infini.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Il faut créer un choc physique. Arrive avec un peu de vitesse sous la balle pour enfoncer tes suspensions sur la carrosserie du ballon.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Envoye la balle en l'air ➔ Vole en dessous à l'envers ➔ Relâche le boost juste avant le contact ➔ Laisse tes **4 roues** presser simultanément la balle ➔ Utilise ton saut retrouvé.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Chain Reset (Multi-Reset)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Enchaîner plusieurs resets de flip consécutifs en l'air sous le ballon pour briser complètement le timing de la défense.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Utilise le premier reset pour te repositionner immédiatement à l'envers. Tu dois utiliser le Stall pour figer ta voiture sous le ballon et répéter l'impact.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Prends un Flip Reset ➔ Utilise instantanément ton saut pour te propulser vers la balle ➔ Fais un Stall (Vol stationnaire) pour que tes roues touchent à nouveau la balle ➔ Répète.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Musty Flick Aérien</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Déclencher un Musty dévastateur en plein vol, souvent combiné juste après un flip reset.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Garde une distance parfaite après le reset. Ta voiture doit pivoter en l'air pour passer sous la ligne horizontale du ballon avant de lancer le backflip.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Obtiens un reset ou utilise ton jump aérien ➔ Incline le joystick gauche vers l'avant pour incliner le nez à plus de 90° vers le bas ➔ Claque ton <span class="btn">Saut</span> arrière (Backflip).</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Helicop Reset (Helicopter Reset)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Faire tourner sa voiture à l'horizontale comme les pales d'un hélicoptère directement sous le ballon pour obtenir un reset continu.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>C'est un équilibre parfait entre le tonneau aérien et le flux d'air du ballon. La voiture doit être maintenue à plat sur le dos tout en tournant sur elle-même.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Positionne-toi en dessous du ballon ➔ Maintiens <span class="btn">Tonneau Aérien Gauche/Droit</span> ➔ Oriente ton joystick gauche vers le bas/côté pour maintenir une trajectoire plate sous la balle jusqu'au reset.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Ceiling Musty Flick</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>La combinaison ultime : se laisser tomber du plafond pour claquer un Musty dévastateur sans aucune limite de temps.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Ne saute pas du plafond, laisse-toi glisser. Le jeu t'accorde ainsi ton flip pour toute la durée de ta chute.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Roule jusqu'au plafond ➔ Laisse la voiture tomber dans le vide ➔ Ajuste ta position sous la balle ➔ Incline le nez à plus de 90° vers le sol ➔ Déclenche l'esquive arrière.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Fetelix Reset</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Obtenir un Flip Reset directement en glissant sur le mur vertical sans jamais avoir besoin de sauter.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Tu dois faire grimper deux roues sur le mur en gardant les deux autres dans le vide, puis utiliser la physique des suspensions pour écraser les roues volantes contre la paroi.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Aborde le mur de biais à haute vitesse ➔ Lève tes deux roues latérales gauches (ou droites) ➔ Dès que les deux roues opposées touchent le mur, effectue un flip latéral vers le mur pour forcer le reset.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Le Stall (Vol stationnaire)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Annuler complètement la gravité du jeu pendant une fraction de seconde pour stopper sa chute en l'air (indispensable pour les multi-resets).</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>Tu dois presser deux forces directionnelles parfaitement opposées en même temps pour créer un bug d'annulation de mouvement.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Maintiens la touche <span class="btn">Tonneau Aérien Droit</span> ➔ Pousse ton joystick gauche **exactement vers la gauche** ➔ Appuie sur <span class="btn">Saut</span> au même instant.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Psycho</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">L'idée</div><p>Marquer un but à l'autre bout de la carte en renvoyant délibérément le ballon sur ton propre mur arrière.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Déclic</div><p>C'est une question de géométrie pure. L'angle de frappe initial doit envoyer la balle ricocher de manière ultra-tendue sur ton backboard.</p></div>
+                <div class="step step-pro"><div class="step-title">Les Inputs</div><p>Vole vers une balle haute ➔ Frappe-la fort avec le coin du pare-choc orienté vers ton propre mur défensif ➔ Tourne-toi immédiatement pour lire la trajectoire supersonique du rebond.</p></div>
+            </div>
+        </details>
+
+
+        <h2>⚙️ Paramètres des Joueurs Pros</h2>
+
+        <details class="cat-settings">
+            <summary>Configuration de Mzen (Le prodige mécanique)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 270 | Hauteur : 90 | Angle : -4.0 | Rigidité : 0.55 | Vitesse de rotation : 5.10</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.40 | Sensibilité aérienne : 1.40 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
+                <div class="step step-pro"><div class="step-title">Touches Spécifiques</div><p>Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau droit : <span class="btn">Carré / X</span> | Tonneau gauche : <span class="btn">Rond / B</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Alpha54 (Vitality)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 270 | Hauteur : 110 | Angle : -3.0 | Rigidité : 0.35 | Vitesse de rotation : 5.00</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.30 | Sensibilité aérienne : 1.30 | Zone morte manette : 0.06 | Zone morte d'esquive : 0.50</p></div>
+                <div class="step step-pro"><div class="step-title">Touches Spécifiques</div><p>Boost : <span class="btn">Rond / B</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau gauche : <span class="btn">Carré / X</span> | Tonneau droit : <span class="btn">R1 / RB</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Vatira (Karmine Corp)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -4.0 | Rigidité : 0.45 | Vitesse de rotation : 4.70</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.45 | Sensibilité aérienne : 1.45 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.75</p></div>
+                <div class="step step-pro"><div class="step-title">Touches Spécifiques</div><p>Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau gauche : <span class="btn">Carré / X</span> | Tonneau droit : Non assigné</p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Firstkiller (G2 Stride)</summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 270 | Hauteur : 110 | Angle : -4.0 | Rigidité : 0.40 | Vitesse de rotation : 4.50</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.70 | Sensibilité aérienne : 1.70 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
+                <div class="step step-pro"><div class="step-title">Touches Spécifiques</div><p>Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau droit : <span class="btn">Rond / B</span> | Tonneau gauche : Non assigné</p></div>
+            </div>
+        </details>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Rocket League Encyclopedia — Tout le jeu est entre tes mains. Bon grind !</p>
+    </footer>
+
+</body>
+</html>
