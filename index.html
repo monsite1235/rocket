@@ -19,6 +19,7 @@
             --glow-pinch: #a855f7;     /* Violet Néon */
             --glow-air: #4361ee;       /* Bleu Indigo */
             --glow-god: #ff007f;       /* Rose Cyberpunk */
+            --glow-combo: #ccff00;     /* Jaune Fluo */
             --glow-settings: #00b4d8;  /* Bleu Turquoise */
         }
 
@@ -120,7 +121,8 @@
         h2:nth-of-type(4) { color: var(--glow-pinch); text-shadow: 0 0 15px rgba(168, 85, 247, 0.3); }
         h2:nth-of-type(5) { color: var(--glow-air); text-shadow: 0 0 15px rgba(67, 97, 238, 0.3); }
         h2:nth-of-type(6) { color: var(--glow-god); text-shadow: 0 0 15px rgba(255, 0, 127, 0.3); }
-        h2:nth-of-type(7) { color: var(--glow-settings); text-shadow: 0 0 15px rgba(0, 180, 216, 0.3); }
+        h2:nth-of-type(7) { color: var(--glow-combo); text-shadow: 0 0 15px rgba(204, 255, 0, 0.3); }
+        h2:nth-of-type(8) { color: var(--glow-settings); text-shadow: 0 0 15px rgba(0, 180, 216, 0.3); }
 
         /* Accordéons colorés */
         details {
@@ -140,6 +142,7 @@
         details.cat-pinch:hover { border-color: rgba(168, 85, 247, 0.5); }
         details.cat-air:hover { border-color: rgba(67, 97, 238, 0.5); }
         details.cat-god:hover { border-color: rgba(255, 0, 127, 0.5); }
+        details.cat-combo:hover { border-color: rgba(204, 255, 0, 0.5); }
         details.cat-settings:hover { border-color: rgba(0, 180, 216, 0.5); }
 
         details:hover {
@@ -153,6 +156,7 @@
         details[open].cat-pinch { box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.3); border-color: var(--glow-pinch); }
         details[open].cat-air { box-shadow: 0 0 25px -5px rgba(67, 97, 238, 0.3); border-color: var(--glow-air); }
         details[open].cat-god { box-shadow: 0 0 25px -5px rgba(255, 0, 127, 0.3); border-color: var(--glow-god); }
+        details[open].cat-combo { box-shadow: 0 0 25px -5px rgba(204, 255, 0, 0.3); border-color: var(--glow-combo); }
         details[open].cat-settings { box-shadow: 0 0 25px -5px rgba(0, 180, 216, 0.3); border-color: var(--glow-settings); }
 
         summary {
@@ -174,6 +178,7 @@
         details.cat-pinch summary:hover { color: var(--glow-pinch); }
         details.cat-air summary:hover { color: var(--glow-air); }
         details.cat-god summary:hover { color: var(--glow-god); }
+        details.cat-combo summary:hover { color: var(--glow-combo); }
         details.cat-settings summary:hover { color: var(--glow-settings); }
 
         summary::-webkit-details-marker {
@@ -248,6 +253,31 @@
             text-shadow: 0 0 4px rgba(255,255,255,0.4);
         }
 
+        /* Style pour les Badges Rôles Joueurs */
+        .badge {
+            font-size: 0.65em;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 900;
+            margin-left: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .p-pro {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+        }
+        .p-style {
+            background: rgba(255, 0, 127, 0.15);
+            color: #ff007f;
+            border: 1px solid rgba(255, 0, 127, 0.4);
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+
         footer {
             text-align: center;
             padding: 60px 20px;
@@ -286,7 +316,7 @@
         </details>
 
         <details class="cat-dash">
-            <summary>Infinite Dash (Horse Dash)</summary>
+            <summary>Infinite Dash</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Prends une vitesse modérée en ligne droite sur le sol, assure-toi d'avoir une trajectoire bien dégagée.</p></div>
                 <div class="step step-pro"><div class="step-title">Comment faire</div><p>Maintiens la touche de <span class="btn">Dérapage</span> enfoncée en continu pendant toute la technique ➔ Lance un premier Wavedash en diagonale droite (Joystick incliné à 45° vers l'avant-droite + <span class="btn">Saut</span>) ➔ Juste après l'impact au sol, balance immédiatement ton joystick gauche à fond vers la gauche pour forcer la suspension opposée à s'écraser ➔ Appuie sur <span class="btn">Saut</span> de manière synchronisée pour exécuter un micro-wavedash vers la gauche ➔ Répète ce mouvement rythmé de balancier (droite-gauche-droite) à une vitesse d'exécution extrême pour forcer les roues avant à bondir sans s'arrêter.</p></div>
@@ -296,8 +326,8 @@
         <details class="cat-dash">
             <summary>Curvedash</summary>
             <div class="content">
-                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Prends de la vitesse sur le mur vertical et prépare ta descente perpendiculaire ou diagonale vers la transition.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Fonce sur le mur à haute vitesse et commence à descendre en ligne droite ou légèrement en diagonale vers le sol ➔ Ne touche surtout pas au bouton de saut pendant la descente ➔ Reste attentif à la courbe physique qui relie le bas du mur et le terrain ➔ Au moment exact où tes deux roues du haut passent le milieu de cette transition arrondie, la voiture décolle de quelques millimètres suite à l'écrasement des amortisseurs ➔ Claque immédiatement une esquive (double saut) vers l'avant ou en diagonale avant sans aucun saut préalable pour déclencher le dash instantané.</p></div>
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Prends de la vitesse sur le mur vertical and prépare ta descente perpendiculaire ou diagonale vers la transition.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Fonce sur le mur à haute vitesse and commence à descendre en ligne droite ou légèrement en diagonale vers le sol ➔ Ne touche surtout pas au bouton de saut pendant la descente ➔ Reste attentif à la courbe physique qui relie le bas du mur et le terrain ➔ Au moment exact où tes deux roues du haut passent le milieu de cette transition arrondie, la voiture décolle de quelques millimètres suite à l'écrasement des amortisseurs ➔ Claque immédiatement une esquive (double saut) vers l'avant ou en diagonale avant sans aucun saut préalable pour déclencher le dash instantané.</p></div>
             </div>
         </details>
 
@@ -317,14 +347,30 @@
             </div>
         </details>
 
+        <details class="cat-dash">
+            <summary>Lix Dash</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Aborde le mur de biais pour forcer un détachement physique des suspensions sans sauter.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>En grimpant sur le mur sous un angle bien précis, lâche brièvement l'accélérateur pour que les suspensions de la voiture se compriment naturellement ➔ Enchaîne immédiatement en effectuant un Wavedash latéral dans la direction du mur sans avoir sauté préalablement, créant un pic de vitesse ultra-violent le long de la paroi.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-dash">
+            <summary>Chain Wavedashing</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Positionne la voiture avec un angle d'inclinaison latéral constant proche du sol.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Réalise un premier Wavedash latéral ou diagonal ➔ Pendant l'animation, utilise le <span class="btn">Tonneau Aérien</span> pour maintenir le flanc opposé surélevé ➔ Dès que les deux premières roues touchent le sol, claque immédiatement un nouveau Wavedash dans la direction opposée pour enchaîner les dashs en ligne droite.</p></div>
+            </div>
+        </details>
+
 
         <h2>🚗 Contrôle Terrestre & Mindgames</h2>
 
         <details class="cat-sol">
-            <summary>Flips Directionnels (Front / Back / Side / Diagonal)</summary>
+            <summary>Flips Directionnels</summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Le Setup</div><p>Prends une trajectoire rectiligne au sol et prépare-toi à économiser ton boost.</p></div>
-                <div class="step step-debutant"><div class="step-title">Comment faire</div><p>Appuie sur <span class="btn">Saut</span> pour décoller légèrement du sol ➔ Oriente instantanément ton joystick gauche vers l'avant (Front), l'arrière (Back) ou les côtés (Side/Diagonal) et appuie à nouveau sur <span class="btn">Saut</span>. Ce double appui déclenche une esquive rapide permettant d'atteindre la vitesse supersonique sans consommer de boost.</p></div>
+                <div class="step step-debutant"><div class="step-title">Comment faire</div><p>Appuie sur <span class="btn">Saut</span> pour décoller légèrement du sol ➔ Oriente instantanément ton joystick gauche vers l'avant (Front), l'arrière (Back) ou les côtés (Side/Diagonal) and appuie à nouveau sur <span class="btn">Saut</span>. Ce double appui déclenche une esquive rapide permettant d'atteindre la vitesse supersonique sans consommer de boost.</p></div>
             </div>
         </details>
 
@@ -332,15 +378,15 @@
             <summary>Half-Flip</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Positionne ton véhicule à l'arrêt ou en recul rapide pour maximiser l'effet de pivot immédiat.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Pousse ton joystick gauche à fond vers le bas et effectue un double <span class="btn">Saut</span> pour lancer un saut périlleux arrière (Backflip) complet ➔ Pile au milieu de la rotation, quand le toit de ta voiture pointe directement vers le sol, pousse violemment ton joystick gauche vers le haut (Flip Cancel) et maintiens-le verrouillé dans cette position pour stopper net l'animation de retournement ➔ Tout en maintenant le joystick en haut, active votre touche de <span class="btn">Tonneau Aérien</span> (gauche ou droit) pour faire pivoter la voiture sur son axe horizontal et atterrir proprement sur tes quatre roues.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Pousse ton joystick gauche à fond vers le bas and effectue un double <span class="btn">Saut</span> pour lancer un saut périlleux arrière (Backflip) complet ➔ Pile au milieu de la rotation, quand le toit de ta voiture pointe directement vers le sol, pousse violemment ton joystick gauche vers l'automatique (Flip Cancel) et maintiens-le verrouillé dans cette position pour stopper net l'animation de retournement ➔ Tout en maintenant le joystick en haut, active votre touche de <span class="btn">Tonneau Aérien</span> (gauche ou droit) pour faire pivoter la voiture sur son axe horizontal et atterrir proprement sur tes quatre roues.</p></div>
             </div>
         </details>
 
         <details class="cat-sol">
-            <summary>Ground Dribble (Dribble au sol)</summary>
+            <summary>Ground Dribble</summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Le Setup</div><p>Fais rouler lentement le ballon devant toi ou récupère un rebond souple.</p></div>
-                <div class="step step-inter"><div class="step-title">Comment faire</div><p>Glisse-toi délicatement sous le ballon pour le faire monter sur le toit de ton châssis ➔ Ajuste constamment ta vitesse à l'aide de l'accélérateur et de micro-coups de <span class="btn">Boost</span> pour maintenir le cercle blanc au sol parfaitement centré sous ta voiture afin de contrôler la trajectoire.</p></div>
+                <div class="step step-inter"><div class="step-title">Comment faire</div><p>Glisse-toi délicatement sous le ballon pour le faire monter sur le toit de ton châssis ➔ Ajuste constamment ta vitesse à l'aide de l'accélérateur and de micro-coups de <span class="btn">Boost</span> pour maintenir le cercle blanc au sol parfaitement centré sous ta voiture afin de contrôler la trajectoire.</p></div>
             </div>
         </details>
 
@@ -348,15 +394,15 @@
             <summary>Bounce Dribble & Fakes</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Suis la trajectoire naturelle du ballon au sol ou approche-le de biais à pleine vitesse.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Pour le Bounce Dribble : Coupe ton boost et roule à côté de la balle. Attends patiemment qu'elle touche le sol. Au millième de seconde qui suit le rebond, percute délicatement le dessous du ballon avec le coin de ton pare-choc pour le faire monter verticalement. Répète à chaque rebond pour garder le contrôle total. ➔ Pour le Fake : Arrive à pleine vitesse face au ballon en direction du but adverse pour faire paniquer le gardien. Juste avant d'entrer en contact avec la balle, relâche complètement l'accélérateur et donne un coup sec sur le <span class="btn">Frein</span>. Laisse l'adversaire s'envoler dans le vide, puis pousse calmement la balle dans le but vuide.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Pour le Bounce Dribble : Coupe ton boost et roule à côté de la balle. Attends patiemment qu'elle touche le sol. Au millième de seconde qui suit le rebond, percute délicatement le dessous du ballon avec le coin de ton pare-choc pour le faire monter verticalement. Répète à chaque rebond pour garder le contrôle total. ➔ Pour le Fake : Arrive à pleine vitesse face au ballon en direction du but adverse pour faire paniquer le gardien. Juste avant d'entrer en contact avec la balle, relâche complètement l'accélérateur et donne un coup sec sur le <span class="btn">Frein</span>. Laisse l'adversaire s'envoler dans le vide, puis pousse calmement la balle dans le but vide.</p></div>
             </div>
         </details>
 
         <details class="cat-sol">
-            <summary>Powerslide Cutting (Crochets dérapés)</summary>
+            <summary>Powerslide Cutting</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Conduis en ligne droite en restant légèrement décalé sur le flanc droit ou gauche de la trajectoire du ballon.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Conduis en ligne droite en restant légèrement décalé sur le côté droit ou gauche du ballon ➔ Donne un coup de volant sec à 90° avec ton joystick gauche vers la balle pour initier le virage ➔ Simultanément, enfonce la touche <span class="btn">Dérapage</span> pendant une fraction de seconde (0,1 à 0,2 seconde maximum) pour briser l'adhérence de tes roues arrière et faire pivoter l'avant du véhicule instantanément ➔ Lâche immédiatement la touche de dérapage et martèle le <span class="btn">Boost</span> pour mordre à nouveau le sol et catapulter ta voiture contre le ballon afin de réaliser un crochet dévastateur.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Conduis en ligne droite en restant légèrement décalé sur le côté droit ou gauche du ballon ➔ Donne un coup de volant sec à 90° avec ton joystick gauche vers la balle pour initier le virage ➔ Simultanément, enfonce la touche <span class="btn">Dérapage</span> pendant une fraction de seconde (0,1 à 0,2 seconde maximum) pour briser l'adhérence de tes roues arrière et faire pivoter l'avant du véhicule instantanément ➔ Lâche immédiatement la touche de dérapage et martèle le <span class="btn">Boost</span> pour mordre à nouveau le sol et catapulter ta voiture against le ballon afin de réaliser un crochet dévastateur.</p></div>
             </div>
         </details>
 
@@ -365,6 +411,14 @@
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Le Setup</div><p>Attends qu'un ballon aérien redescende ou qu'une passe arrive vers toi avec un rebond imminent.</p></div>
                 <div class="step step-inter"><div class="step-title">Comment faire</div><p>Cadre la trajectoire de la balle ➔ Attends le millième de seconde précis *après* que la balle ait rebondi sur la pelouse ➔ Déclenche instantanément un flip avant (Joystick vers l'avant + <span class="btn">Saut</span>) en percutant la balle avec le nez ou le coin rigide de ton pare-choc pour lui conférer une puissance et une vitesse maximales.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-sol">
+            <summary>No-Flip Dribble</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Mets la balle sur ton toit à une vitesse parfaitement synchronisée à celle de ta voiture.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Initie un flip avant mais effectue instantanément un Flip Cancel d'une pureté chirurgicale absolue ➔ L'animation s'arrête mais la physique du jeu propulse ta voiture vers l'avant de manière parfaitement plane sans rotation, te permettant de maintenir la balle collée sur ton toit tout en prenant une accélération phénoménale.</p></div>
             </div>
         </details>
 
@@ -380,10 +434,10 @@
         </details>
 
         <details class="cat-flick">
-            <summary>Musty Flick (Au sol)</summary>
+            <summary>Musty Flick</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Fais monter délicatement le ballon sur le toit de ton châssis pour le stabiliser parfaitement vers l'avant.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Stabilise le ballon de manière immobile sur l'avant du toit de ta voiture ➔ Appuie sur <span class="btn">Saut</span> une seule fois sans flipper, tout en maintenant ta vitesse pour rester juste sous la balle en l'air ➔ Pousse immédiatement ton joystick gauche à fond vers l'avant pour incliner le nez de ton véhicule vers le sol. Tu dois dépasser l'angle vertical de 90° (ton spoiler arrière doit faire face au ciel) ➔ Remets brièvement ton joystick gauche en position neutre (au centre) ➔ Déclenche instantanément ton deuxième <span class="btn">Saut</span> en tirant le joystick vers le bas (Backflip). Le jeu va te projeter vers l'avant et fouetter la balle à une vitesse phénoménale.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Stabilise le ballon de manière immobile sur l'avant du toit de ta voiture ➔ Appuie sur <span class="btn">Saut</span> une seule fois sans flipper, tout en maintenant ta vitesse pour rester juste sous la balle en l'air ➔ Pousse immédiatement ton joystick gauche à fond vers l'avant pour incliner le nez de ton véhicule vers le sol. Tu doit dépasser l'angle vertical de 90° (ton spoiler arrière doit faire face au ciel) ➔ Remets brièvement ton joystick gauche en position neutre (au centre) ➔ Déclenche instantanément ton deuxième <span class="btn">Saut</span> en tirant le joystick vers le bas (Backflip). Le jeu va te projeter vers l'avant et fouetter la balle à une vitesse phénoménale.</p></div>
             </div>
         </details>
 
@@ -399,7 +453,7 @@
             <summary>Breezi Flick</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Contrôle le ballon au sol and assure un positionnement centré sur ton toit avant le déclenchement.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Fais monter le ballon sur ton toit et déclenche un <span class="btn">Saut</span> simple vertical ➔ Active immédiatement ton <span class="btn">Tonneau Aérien Gauche</span> en continu tout en poussant simultanément ton joystick gauche à fond vers la droite (ceci lance un Tornado Spin qui fait vriller ta voiture) ➔ Dès que le toit de ta voiture fait face au sol au cours de cette vrille, lâche toutes les touches et pousse ton joystick vers l'avant pour incliner le nez au-delà des 90° verticaux (position Musty) ➔ Effectue ton deuxième <span class="btn">Saut</span> en faisant un saut arrière (Backflip) net pour cueillir et propulser la balle.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Fais monter le ballon sur ton toit and déclenche un <span class="btn">Saut</span> simple vertical ➔ Active immédiatement ton <span class="btn">Tonneau Aérien Gauche</span> en continu tout en poussant simultanément ton joystick gauche à fond vers la droite (ceci lance un Tornado Spin qui fait vriller ta voiture) ➔ Dès que le toit de ta voiture fait face au sol au cours de cette vrille, lâche toutes les touches et pousse ton joystick vers l'avant pour incliner le nez au-delà des 90° verticaux (position Musty) ➔ Effectue ton deuxième <span class="btn">Saut</span> en faisant un saut arrière (Backflip) net pour cueillir et propulser la balle.</p></div>
             </div>
         </details>
 
@@ -408,6 +462,22 @@
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Amorce un dribble sur le toit puis effectue une extension verticale nette pour soulever la balle.</p></div>
                 <div class="step step-pro"><div class="step-title">Comment faire</div><p>Prends de la hauteur avec un <span class="btn">Saut</span> vertical pour soulever le ballon avec ton toit ➔ Pousse immédiatement ton joystick gauche à fond vers l'avant pour initier une rotation avant complète à 180°, jusqu'à ce que l'arrière de ton spoiler pointe directement vers la balle ➔ Utilise ton <span class="btn">Tonneau Aérien</span> pour basculer la voiture complètement sur le dos (les roues vers le ciel) tout en restant juste devant le ballon ➔ Déclenche une esquive arrière (Backflip) ou diagonale arrière (ou retarde le timing pour un Delayed Flick). Le fessier de ton véhicule va fouetter le cuir par-dessous dans une trajectoire très lobée.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-flick">
+            <summary>Mangi Flick</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Saute et utilise un tonneau pour te mettre sur le côté à 90° ➔ Effectue un saut latéral (Sideflip) tout en annulant instantanément le mouvement (Flip Cancel) pour figer la carrosserie sous un angle improbable ➔ Ce mouvement brise la trajectoire attendue et propulse la balle en hauteur de manière imprévisible.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Saute et utilise un tonneau pour te mettre sur le côté à 90° ➔ Effectue un saut latéral (Sideflip) tout en annulant instantanément le mouvement (Flip Cancel) pour figer la carrosserie sous un angle improbable ➔ Ce mouvement brise la trajectoire attendue et propulse la balle en hauteur de manière imprévisible.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-flick">
+            <summary>Turtle Flick</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Glisse sur le dos (position de la tortue) sur le sol avec la balle qui roule juste derrière toi.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Pendant que tu glisses sur le dos, attends que la balle arrive au contact de ton châssis inversé ➔ Appuie sur <span class="btn">Saut</span> : la voiture va se redresser d'un coup sec, frappant le ballon avec ses roues ou son bas de caisse pour effectuer un lob dévastateur.</p></div>
             </div>
         </details>
 
@@ -434,7 +504,7 @@
             <summary>Ceiling Pinch</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Envoie une balle très haute ou en cloche qui monte vers le plafond de l'arène.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Suis la balle en volant vers le haut ou en grimpant sur le mur jusqu'au plafond ➔ Positionne ta voiture au-dessus de la balle ➔ Au moment exact où le ballon touche ou effleure la surface du plafond, effectue une esquive violente (ou un écrasement net du nez) pour pincer la balle contre le plafond et la faire fuser à une vitesse supersonique vers le camp adverse.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Suis la balle en volant vers le haut ou en grimpant sur le mur jusqu'au plafond ➔ Positionne ta voiture au-dessus de la balle ➔ Au moment exact où le ballon touche ou effleure la surface du plafond, effectue une esquive violente (ou un écrasement net du nez) pour pincer la balle against le plafond et la faire fuser à une vitesse supersonique vers le camp adverse.</p></div>
             </div>
         </details>
 
@@ -443,6 +513,14 @@
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Synchronise-toi avec un coéquipier au sol ou dans les airs autour d'une balle neutre.</p></div>
                 <div class="step step-pro"><div class="step-title">Comment faire</div><p>Foncez tous les deux simultanément vers le ballon depuis deux angles opposés ou convergents ➔ Déclenchez vos flips respectifs (esquives) au même millième de seconde pour enserrer la balle entre les pare-chocs de vos deux véhicules. Si le timing est parfait, la balle sera expulsée avec une puissance cumulée dévastatrice.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-pinch">
+            <summary>Aztral Pinch</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Amène la balle sur le mur latéral mais très près des angles ou des coins de la map.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Arrive à pleine vitesse contre la courbe du coin de la map ➔ Réalise une esquive diagonale ultra-précise pour venir coincer la balle non pas à plat, mais exactement dans l'angle mort de la jointure des parois, propulsant le ballon sur une trajectoire folle qui longe tout le terrain à ras du mur.</p></div>
             </div>
         </details>
 
@@ -505,6 +583,14 @@
             </div>
         </details>
 
+        <details class="cat-air">
+            <summary>Tornado Spin</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Décolle du sol en maintenant un vol rectiligne initial.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Maintiens enfoncée ta touche de <span class="btn">Tonneau Aérien Gauche</span> (ou droit) tout en poussant ton joystick gauche dans la direction opposée (à droite) ➔ Votre voiture va se mettre à vriller sur elle-même comme une toupie tout en conservant son axe ascensionnel, base indispensable pour masquer ses intentions aérodynamiques.</p></div>
+            </div>
+        </details>
+
 
         <h2>👑 Mécaniques Élite & Légendaires</h2>
 
@@ -517,6 +603,14 @@
         </details>
 
         <details class="cat-god">
+            <summary>Sidewall</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Accompagne une balle qui flotte parallèlement ou qui revient très fort vers l'une des parois latérales du terrain.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Vole ou roule sur le mur en direction de la balle ➔ Positionne ton châssis de manière perpendiculaire ou en diagonale stricte par rapport à la surface plane du mur vertical ➔ Au moment précis de l'impact du ballon contre la paroi, déclenche une esquive (flip latéral ou avant) pour piéger la carrosserie et frapper instantanément le ballon avec le dessous de la voiture ou son spoiler afin de le projeter de volée vers l'avant.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
             <summary>Reset Pop</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Obtiens un Flip Reset sous le ballon tout en gardant une vitesse ascensionnelle fluide et proche de celle de la balle.</p></div>
@@ -525,7 +619,7 @@
         </details>
 
         <details class="cat-god">
-            <summary>Chain Reset (Multi-Reset)</summary>
+            <summary>Chain Reset</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Valide un premier contact de réinitialisation sous le ballon avec un angle de carrosserie très compact.</p></div>
                 <div class="step step-pro"><div class="step-title">Comment faire</div><p>Exécute un premier Flip Reset parfait sous le ballon ➔ Dès que le reset est validé, utilise instantanément ton nouveau saut en l'effectuant un saut arrière (Backflip) combiné à un Flip Cancel (joystick poussé vers le haut) pour propulser ton châssis à l'envers très près du ballon ➔ Pour coller le reset suivant sans envoyer la balle trop loin, exécute un Stall parfait en maintenant <span class="btn">Tonneau Aérien Droit</span> + Joystick gauche poussé à fond vers la gauche + <span class="btn">Saut</span> ➔ Le Stall va figer ta position et plaquer tes roues sur la balle pour valider le second reset. Répète l'opération.</p></div>
@@ -533,7 +627,7 @@
         </details>
 
         <details class="cat-god">
-            <summary>Le Stall (Vol stationnaire)</summary>
+            <summary>Le Stall</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Prends de la hauteur et relâche momentanément toutes les commandes directionnelles en l'air.</p></div>
                 <div class="step step-pro"><div class="step-title">Comment faire</div><p>En plein vol, assure-toi de n'appliquer aucune direction sur ton véhicule ➔ Maintiens enfoncée de manière ferme ta touche assignée au <span class="btn">Tonneau Aérien Droit</span> (ne fonctionne pas avec le tonneau manuel) ➔ Pousse simultanément ton joystick gauche **de manière parfaitement rectiligne vers la gauche** (à l'exact opposé de votre tonneau) ➔ Tout en maintenant ces deux inputs opposés bloqués, appuie sur la touche de <span class="btn">Saut</span> à la milliseconde près. Ta voiture doit émettre un bruit d'esquive sec tout en restant immobile sans dévier.</p></div>
@@ -544,12 +638,12 @@
             <summary>Musty Flick Aérien</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Obtiens un premier contact de reset net sous le ballon tout en conservant une trajectoire ascendante stable.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Obtiens un Flip Reset propre en plaquant tes quatre roues sous le ballon en l'air ➔ Ne saute pas tout de suite : laisse la gravité créer une micro-distance d'un mètre entre ta voiture et la balle ➔ Utilise ton joystick gauche vers l'avant pour faire piquer le nez de ton véhicule vers le sol à un angle dépassant les 90° verticaux (votre spoiler arrière doit faire face au ballon) ➔ Relâche le joystick au centre, puis déclenche immédiatement ton <span class="btn">Saut</span> arrière (Backflip) pour fouetter magnifiquement la balle en l'air.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Obtiens un Flip Reset propre en plaquant tes quatre roues sous le ballon in l'air ➔ Ne saute pas tout de suite : laisse la gravité créer une micro-distance d'un mètre entre ta voiture et la balle ➔ Utilise ton joystick gauche vers l'avant pour faire piquer le nez de ton véhicule vers le sol à un angle dépassant les 90° verticaux (votre spoiler arrière doit faire face au ballon) ➔ Relâche le joystick au centre, puis déclenche immédiatement ton <span class="btn">Saut</span> arrière (Backflip) pour fouetter magnifiquement la balle en l'air.</p></div>
             </div>
         </details>
 
         <details class="cat-god">
-            <summary>Helicop Reset (Helicopter Reset)</summary>
+            <summary>Helicop Reset</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Vole en ligne droite inversée pour venir te positionner directement sous la trajectoire de la balle en l'air.</p></div>
                 <div class="step step-pro"><div class="step-title">Comment faire</div><p>Positionne-toi en vol inversé (sur le dos) juste en dessous de la trajectoire descendante de la balle ➔ Maintiens enfoncée ta touche de <span class="btn">Tonneau Aérien Gauche</span> (ou droit) pour lancer une rotation continue à l'horizontale ➔ Pendant que la voiture tourne sur son axe, effectue des micro-ajustements circulaires constants avec ton joystick gauche vers le bas et le côté opposé pour maintenir le châssis parfaitement parallèle au sol ➔ Laisse le ballon venir se poser sur tes roues en rotation pour obtenir le reset de manière fluide.</p></div>
@@ -576,7 +670,7 @@
             <summary>Fetelix Reset</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Aborde la transition courbe du mur à pleine vitesse sans amorcer le moindre saut parasite.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Aborde le mur vertical de biais à haute vitesse sans sauter ➔ Laisse tes deux roues du bas grimper sur l'arrondi pendant que vos deux roues du haut décollent très légèrement dans le vide suite à l'inclinaison ➔ Au moment précis où les deux roues du bas sont bien ancrées sur la partie strictement verticale du mur, déclenche instantanément un flip latéral complet (Joystick poussé à fond à gauche ou à droite + <span class="btn">Saut</span>) orienté face au mur ➔ La force de l'esquive va écraser les deux roues suspendues contre la paroi d'un coup sec, validant un reset immédiat au mur.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Aborde le mur vertical de biais à haute vitesse sans sauter ➔ Lâche tes deux roues du bas grimper sur l'arrondi pendant que vos deux roues du haut décollent très légèrement dans le vide suite à l'inclinaison ➔ Au moment précis où les deux roues du bas sont bien ancrées sur la partie strictement verticale du mur, déclenche instantanément un flip latéral complet (Joystick poussé à fond à gauche ou à droite + <span class="btn">Saut</span>) orienté face au mur ➔ La force de l'esquive va écraser les deux roues suspendues contre la paroi d'un coup sec, validant un reset immédiat au mur.</p></div>
             </div>
         </details>
 
@@ -600,7 +694,58 @@
             <summary>Le Plan B</summary>
             <div class="content">
                 <div class="step step-inter"><div class="step-title">Le Setup</div><p>Propulse le ballon à haute altitude en direction de la structure supérieure adverse.</p></div>
-                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Propulse la balle vers le plafond ou très haut sur le backboard adverse ➔ Monte en l'air et initie une feinte d'attaque classique (comme un reset ou un double tap) pour forcer le défenseur à s'engager dans le vide ➔ Au tout dernier moment, utilisez votre <span class="btn">Tonneau Aérien</span> et votre deuxième <span class="btn">Saut</span> pour rediriger brutalement le ballon selon un angle opposé ou le rabattre instantanément au sol. Cette feinte mécanique convertit une situation de contre-attaque bloquée en un but direct imparable.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Propulse la balle vers le plafond ou très haut sur le backboard adverse ➔ Monte en l'air et initie une feinte d'attaque classique (comme un reset ou un double tap) pour force le défenseur à s'engager dans le vide ➔ Au tout dernier moment, utilisez votre <span class="btn">Tonneau Aérien</span> et votre deuxième <span class="btn">Saut</span> pour rediriger brutalement le ballon selon un angle opposé ou le rabattre instantanément au sol. Cette feinte mécanique convertit une situation de contre-attaque bloquée en un but direct imparable.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Muracle Reset</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Amène la balle très haute vers le plafond de manière parfaitement verticale.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Vole vers le plafond and effectue un premier reset directement sur la structure rigide du haut ➔ Utilise immédiatement ce saut pour vous propulser à l'envers sous le ballon descendant afin d'enchaîner instantanément sur un Flip Reset classique sans jamais toucher le sol.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-god">
+            <summary>Arsenal Reset</summary>
+            <div class="content">
+                <div class="step step-inter"><div class="step-title">Le Setup</div><p>Monte en l'air sous le ballon en restant parfaitement aligné dans l'axe vertical.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Au lieu de faire une rotation sur le dos par le côté, initie un saut périlleux avant (Frontflip) partiel ➔ Annule l'animation pile au moment où la voiture se retrouve à la verticale complète, le fessier face au sol et les roues écrasant brutalement le bas du ballon pour force un reset ultra-rapide.</p></div>
+            </div>
+        </details>
+
+
+        <h2>👑 Combinaisons de Techniques (Combos Enchaînés)</h2>
+
+        <details class="cat-combo">
+            <summary>Reset en Lix Dash</summary>
+            <div class="content">
+                <div class="step step-pro"><div class="step-title">Le Setup</div><p>Obtiens un Flip Reset en l'air à une hauteur moyenne, idéalement à proximité de l'une des parois latérales.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Claque un Flip Reset sous la balle ➔ Utilise instantanément ton saut récupéré pour vous propulser vers le mur en diagonale descendante ➔ Au moment d'atterrir sur la paroi de biais, lâche brièvement l'accélérateur pour tasser tes suspensions et enchaîne immédiatement sur un Wavedash latéral foudroyant (Lix Dash) sans saut préalable pour fondre sur le rebond.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-combo">
+            <summary>Ceiling Zapdash</summary>
+            <div class="content">
+                <div class="step step-pro"><div class="step-title">Le Setup</div><p>Monte à haute vitesse le long de la paroi jusqu'au plafond de l'arène.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Détache-toi du plafond sans sauter pour conserver ton flip indéfiniment ➔ Utilise ton boost pour redescendre vers le sol plus vite que la balle ➔ Au moment d'atterrir sur la pelouse, incline le nez pour faire toucher tes roues avant une fraction de seconde avant l'arrière ➔ Profite du rebond mécanique naturel de la carrosserie pour claquer ton flip du plafond stocké dans un Zapdash au sol ultra-rapide.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-combo">
+            <summary>Curvedash en Musty Flick</summary>
+            <div class="content">
+                <div class="step step-pro"><div class="step-title">Le Setup</div><p>Prends le contrôle de la balle en dribble au sol tout en approchant la transition courbe du mur inférieur.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>En franchissant l'arrondi reliant le sol au mur, exécute un Curvedash instantané à l'aide du micro-décollage des amortisseurs ➔ Ce pic de vitesse soudain va propulser la balle très haut sur ton toit ➔ Saute immédiatement, incline le nez vers le sol au-delà de 90° et déclenche ton Backflip pour transformer l'accélération du Curvedash en un Musty Flick surpuissant.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-combo">
+            <summary>Wavedash à 180° Flick</summary>
+            <div class="content">
+                <div class="step step-pro"><div class="step-title">Le Setup</div><p>Arrive au sol face au ballon avec une hauteur de saut légère ou en sortie de vol bas.</p></div>
+                <div class="step step-pro"><div class="step-title">Comment faire</div><p>Réalise un Wavedash au sol pour glisser sous le ballon tout en maintenant la touche <span class="btn">Dérapage</span> ➔ Pendant que la balle se pose sur ton châssis, effectue un saut vertical immédiat tout en faisant pivoter ton véhicule à 180° à l'envers (dos à la trajectoire) ➔ Déclenche ton second saut en esquive diagonale arrière pour catapulter violemment le cuir en cloche.</p></div>
             </div>
         </details>
 
@@ -608,7 +753,7 @@
         <h2>🛡️ Tactiques & Mécaniques Défensives</h2>
 
         <details class="cat-settings">
-            <summary>Shadow Defense (Défense de l'Ombre)</summary>
+            <summary>Shadow Defense</summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Le Setup</div><p>Replace-toi rapidement en reculant parallèlement et dans la même direction que l'attaquant adverse.</p></div>
                 <div class="step step-inter"><div class="step-title">Comment faire</div><p>Au lieu de foncer tête baissée vers l'adversaire, calque ta trajectoire et ta vitesse sur les siennes en courant vers tes propres buts ➔ Conserve une distance optimale pour boucher un maximum d'angles de tir ➔ Attends le moment précis où l'adversaire s'engage ou perd le contrôle pour sauter en diagonale arrière ou dévier le tir au dernier moment.</p></div>
@@ -624,10 +769,10 @@
         </details>
 
 
-        <h2>⚙️ Paramètres des Joueurs Pros</h2>
+        <h2>⚙️ Configuration & Paramètres des Joueurs</h2>
 
         <details class="cat-settings">
-            <summary>Configuration de Zen (Vitality - Le Roi de la Précision)</summary>
+            <summary>Configuration de Zen (Vitality - Le Roi de la Précision) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 270 | Hauteur : 90 | Angle : -4.0 | Rigidité : 0.35 | Vitesse de rotation : 5.70 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.80 | Sensibilité aérienne : 1.80 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.50</p></div>
@@ -636,7 +781,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Mawkzy (Le Maître Incontesté du 1v1 & des Flicks)</summary>
+            <summary>Configuration de Mawkzy (Le Maître Incontesté du 1v1) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 (PS4) | FOV : 110° | Distance : 270 | Hauteur : 110 | Angle : -3.0 | Rigidité : 0.40 | Vitesse de rotation : 5.00 | Secousse caméra : Non | Vitesse de transition : 1.00</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.60 | Sensibilité aérienne : 1.60 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
@@ -645,7 +790,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de MonkeyM00n (BDS - La Constance Absolue)</summary>
+            <summary>Configuration de MonkeyM00n (BDS - La Constance Absolue) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 260 | Hauteur : 110 | Angle : -3.0 | Rigidité : 0.35 | Vitesse de rotation : 4.70 | Secousse caméra : Non | Vitesse de transition : 1.30</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.30 | Sensibilité aérienne : 1.30 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.65</p></div>
@@ -654,7 +799,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Daniel (G2 Stride - Le Génie NA)</summary>
+            <summary>Configuration de Daniel (G2 Stride - Le Génie NA) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : Xbox Wireless Controller | FOV : 110° | Distance : 270 | Hauteur : 110 | Angle : -4.0 | Rigidité : 0.50 | Vitesse de rotation : 4.50 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.50 | Sensibilité aérienne : 1.50 | Zone morte manette : 0.07 | Zone morte d'esquive : 0.75</p></div>
@@ -663,7 +808,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Mzen (Le prodige mécanique)</summary>
+            <summary>Configuration de Mzen (Le prodige mécanique) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 (PS4) | FOV : 110° | Distance : 270 | Hauteur : 90 | Angle : -4.0 | Rigidité : 0.55 | Vitesse de rotation : 5.10 | Secousse caméra : Non | Vitesse de transition : 1.40</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.40 | Sensibilité aérienne : 1.40 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
@@ -672,7 +817,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Alpha54 (Vitality)</summary>
+            <summary>Configuration de Alpha54 (Vitality) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 270 | Hauteur : 110 | Angle : -3.0 | Rigidité : 0.35 | Vitesse de rotation : 5.00 | Secousse caméra : Non | Vitesse de transition : 1.00</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.30 | Sensibilité aérienne : 1.30 | Zone morte manette : 0.06 | Zone morte d'esquive : 0.50</p></div>
@@ -681,7 +826,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Vatira (Karmine Corp)</summary>
+            <summary>Configuration de Vatira (Karmine Corp) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -4.0 | Rigidité : 0.45 | Vitesse de rotation : 4.70 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.45 | Sensibilité aérienne : 1.45 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.75</p></div>
@@ -690,7 +835,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Firstkiller (G2 Stride)</summary>
+            <summary>Configuration de Firstkiller (G2 Stride) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 (PS4) | FOV : 110° | Distance : 270 | Hauteur : 110 | Angle : -4.0 | Rigidité : 0.40 | Vitesse de rotation : 4.50 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.70 | Sensibilité aérienne : 1.70 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
@@ -699,7 +844,16 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de VexooRL (Créateur & Analyse de Trajectoires)</summary>
+            <summary>Configuration de Flitz (Spécialiste Compétitif NA) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -4.0 | Rigidité : 0.40 | Vitesse de rotation : 5.00 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.40 | Sensibilité aérienne : 1.40 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
+                <div class="step step-pro"><div class="step-title">Touches & Contrôles Complets</div><p>Accélérer : <span class="btn">R2</span> | Reculer : <span class="btn">L2</span> | Sauter : <span class="btn">Croix / X</span> | Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau gauche : <span class="btn">Carré / X</span> | Tonneau droit : Non assigné | Vue ballon : <span class="btn">Triangle / Y</span> | Regarder derrière : <span class="btn">R3 (Clic Droit)</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de VexooRL (Analyse de Trajectoires) <span class="badge p-style">Freestyler</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -4.0 | Rigidité : 0.45 | Vitesse de rotation : 5.00 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.50 | Sensibilité aérienne : 1.50 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.70</p></div>
@@ -708,7 +862,7 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Mozarella (Spécialiste Kickoffs & Kick)</summary>
+            <summary>Configuration de Mozarella (Spécialiste Kickoffs) <span class="badge p-pro">Pro</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -3.0 | Rigidité : 0.40 | Vitesse de rotation : 5.20 | Secousse caméra : Non | Vitesse de transition : 1.30</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.55 | Sensibilité aérienne : 1.55 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.65</p></div>
@@ -717,11 +871,83 @@
         </details>
 
         <details class="cat-settings">
-            <summary>Configuration de Poyos (Spécialiste Mécanique Freestyle)</summary>
+            <summary>Configuration de Pulse JZR (Légende Absolue du Freestyle) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 | FOV : 110° | Distance : 280 | Hauteur : 110 | Angle : -3.0 | Rigidité : 0.45 | Vitesse de rotation : 5.00 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.50 | Sensibilité aérienne : 1.50 | Zone morte manette : 0.06 | Zone morte d'esquive : 0.70</p></div>
+                <div class="step step-pro"><div class="step-title">Touches & Contrôles Complets</div><p>Accélérer : <span class="btn">R2</span> | Reculer : <span class="btn">L2</span> | Sauter : <span class="btn">Croix</span> | Boost : <span class="btn">R1</span> | Dérapage / Tonneau manuel : <span class="btn">L1</span> | Tonneau gauche : <span class="btn">Carré</span> | Tonneau droit : Non assigné | Vue ballon : <span class="btn">Triangle</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Pulse Mesko (Spécialiste Team-Reset) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualSense (PS5) | FOV : 110° | Distance : 260 | Hauteur : 90 | Angle : -4.0 | Rigidité : 0.60 | Vitesse de rotation : 5.50 | Secousse caméra : Non</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.70 | Sensibilité aérienne : 1.70 | Zone morte manette : 0.05</p></div>
+                <div class="step step-pro"><div class="step-title">Touches & Contrôles Complets</div><p>Accélérer : <span class="btn">R2</span> | Reculer : <span class="btn">L2</span> | Sauter : <span class="btn">X</span> | Boost : <span class="btn">R1</span> | Dérapage : <span class="btn">L1</span> | Tonneau droit : <span class="btn">Rond</span> | Tonneau gauche : <span class="btn">Carré</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Jakze (Pionnier du Muracle Reset) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -4.0 | Rigidité : 0.50 | Rotation : 4.80</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités</div><p>Sensibilité directionnelle : 1.40 | Sensibilité aérienne : 1.40 | Zone morte : 0.08</p></div>
+                <div class="step step-pro"><div class="step-title">Contrôles</div><p>Contrôles optimisés pour enchaîner les structures et les resets aériens complexes au plafond.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Ganer (Recordman Mondial de Chain Resets) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 250 | Hauteur : 90 | Angle : -5.0 | Rigidité : 0.70 | Rotation : 6.00</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités</div><p>Sensibilité directionnelle : 2.00 | Sensibilité aérienne : 2.00 | Zone morte : 0.04</p></div>
+                <div class="step step-pro"><div class="step-title">Contrôles</div><p>Configuration à très haute sensibilité pour permettre le spam rythmique parfait du Stall mécanique.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Henkovic (Créateur de Trajectoires Uniques) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 270 | Hauteur : 100 | Angle : -3.0 | Rigidité : 0.40 | Rotation : 5.00</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités</div><p>Sensibilité directionnelle : 1.60 | Sensibilité aérienne : 1.60 | Zone morte : 0.05</p></div>
+                <div class="step step-pro"><div class="step-title">Contrôles</div><p>Équilibre parfait pour combiner la fluidité des spins aériens et la violence des frappes en Psycho.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Muery (Expert No-Flip & Ground Freestyle) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra</div><p>FOV : 110° | Distance : 240 | Hauteur : 90 | Angle : -4.0 | Rigidité : 0.80 | Rotation : 4.50</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités</div><p>Sensibilité directionnelle : 1.30 | Sensibilité aérienne : 1.30 | Zone morte : 0.07</p></div>
+                <div class="step step-pro"><div class="step-title">Contrôles</div><p>Paramètres lourds maximisant la rigidité pour les enchaînements au sol et les flicks millimétrés.</p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Pulse Gappled (Pulse Clan - Elite Mechanical) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 (PS4) | FOV : 110° | Distance : 260 | Hauteur : 100 | Angle : -4.0 | Rigidité : 0.45 | Vitesse de rotation : 5.20 | Secousse caméra : Non | Vitesse de transition : 1.20</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.60 | Sensibilité aérienne : 1.60 | Zone morte manette : 0.05 | Zone morte d'esquive : 0.60</p></div>
+                <div class="step step-pro"><div class="step-title">Touches & Contrôles Complets</div><p>Accélérer : <span class="btn">R2</span> | Reculer : <span class="btn">L2</span> | Sauter : <span class="btn">Croix / X</span> | Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau gauche : <span class="btn">Carré / X</span> | Tonneau droit : <span class="btn">Rond / B</span> | Vue ballon : <span class="btn">Triangle / Y</span> | Regarder derrière : <span class="btn">R3 (Clic Droit)</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Poyos (Spécialiste Mécanique Freestyle) <span class="badge p-style">Freestyler</span></summary>
             <div class="content">
                 <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 (PS4) | FOV : 110° | Distance : 270 | Hauteur : 90 | Angle : -4.0 | Rigidité : 0.50 | Vitesse de rotation : 4.80 | Secousse caméra : Non | Vitesse de transition : 1.30</p></div>
                 <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.65 | Sensibilité aérienne : 1.65 | Zone morte manette : 0.06 | Zone morte d'esquive : 0.65</p></div>
                 <div class="step step-pro"><div class="step-title">Touches & Contrôles Complets</div><p>Accélérer : <span class="btn">R2</span> | Reculer : <span class="btn">L2</span> | Sauter : <span class="btn">Croix / X</span> | Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau gauche : <span class="btn">Carré / X</span> | Tonneau droit : Non assigné | Vue ballon : <span class="btn">Triangle / Y</span> | Regarder derrière : <span class="btn">R3 (Clic Droit)</span></p></div>
+            </div>
+        </details>
+
+        <details class="cat-settings">
+            <summary>Configuration de Evample (Le Maître du No-Flip Dribble) <span class="badge p-style">Freestyler</span></summary>
+            <div class="content">
+                <div class="step step-debutant"><div class="step-title">Réglages Caméra & Manette</div><p>Manette : DualShock 4 (PS4) | FOV : 110° | Distance : 240 | Hauteur : 90 | Angle : -5.0 | Rigidité : 0.70 | Vitesse de rotation : 4.20 | Secousse caméra : Non | Vitesse de transition : 1.00</p></div>
+                <div class="step step-inter"><div class="step-title">Sensibilités & Deadzones</div><p>Sensibilité directionnelle : 1.30 | Sensibilité aérienne : 1.30 | Zone morte manette : 0.10 | Zone morte d'esquive : 0.50</p></div>
+                <div class="step step-pro"><div class="step-title">Touches & Contrôles Complets</div><p>Accélérer : <span class="btn">R2</span> | Reculer : <span class="btn">L2</span> | Sauter : <span class="btn">Croix / X</span> | Boost : <span class="btn">R1 / RB</span> | Dérapage / Tonneau manuel : <span class="btn">L1 / LB</span> | Tonneau droit : <span class="btn">Rond / B</span> | Tonneau gauche : Non assigné | Vue ballon : <span class="btn">Triangle / Y</span> | Regarder derrière : <span class="btn">R3 (Clic Droit)</span></p></div>
             </div>
         </details>
 
